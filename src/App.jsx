@@ -1,10 +1,9 @@
-import React from 'react';
-// import Home from './Components/home';
+import React, {useEffect, useState} from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import LandingPage from './Components/LandingPage/LandingPage';
 import Footer from './Components/Footer/Footer';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import { useEffect, useState } from 'react/cjs/react.development';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {AnimatePresence} from 'framer-motion';
 function App(){
    const [size,setSize] = useState(window.innerWidth);
    const [onMobile,setOnMobile] = useState(false);
@@ -27,15 +26,13 @@ function App(){
    return (
          <>
             <Router>
+               <AnimatePresence exitBeforeEnter>
                <Navbar onMobile={onMobile} logIn={logIn}/>            
                <Routes>
-                  <Route exact path="/" element={<LandingPage onMobile={onMobile}/>}/>                  
-                  {/* <Route path="/home" element={<Home onMobile={onMobile}/>}/>                               */}
-                  {/* <Route path="/categories/:name" element={<Category onMobile={onMobile}/>}/>
-                  <Route path="/products/:name" element={<Product/>}/>
-                  <Route path="/items/:name" element={<Item/>}/> */}
+                  <Route exact path="/" element={<LandingPage onMobile={onMobile}/>}/>                                   
                </Routes>
                <Footer/>
+               </AnimatePresence>
             </Router>
          </>
       )

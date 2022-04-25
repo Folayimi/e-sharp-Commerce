@@ -11,64 +11,49 @@ body{
     position:fixed;
     width:100%;
     padding:1.5em 3em 0em 3em;
-    display:flex;
-    color:white;
+    display:flex;            
+    background: rgba(0,0,0,0.3);
     justify-content: space-between;
     align-items: center;
-    z-index:2;    
+    z-index:2;        
 }
-.header > .brandName{
-    font-family: Calibri light;
-    font-size: 1.8rem;
-    font-weight: bolder; 
+.header > .brandName{    
     padding-bottom: 0.5em;   
+    width:6em;
+    height:3em;    
+}
+.brandName img{
+    width:100%;
+    height: 100%;
 }
 .header > .navigator{    
     flex: 0 1 30em;    
     display: flex;    
     justify-content: space-between;    
     align-items: center;    
-    font-family: Calibri light;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-family: 'Calibri light';
+    font-size: 1.2rem;    
+    color: white;
 }
-.navigator > .about{
+.navigator > .navBtn{
     height:2.5em;
     padding-top:0.3em;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;    
+    justify-content: space-between;  
+    font-size:1rem;      
 }
-.navigator > .about > .navBar{
+.navigator > .navBtn > .navBar{
     width:100%;
     height:0.15em;    
 }
-.about:hover{
-    cursor:pointer;
+ .navBtn:hover{
     font-weight: bolder;
+    cursor:pointer;    
+    color: white;    
     transition: .7s;
 }
-.about:hover > .navBar{
-    background:rgb(243, 74, 74);
-    transition: .7s;
-}
-.navigator > .logIn{
-    height:2.5em;
-    padding-top:0.3em;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;    
-}
-.navigator > .logIn > .navBar{
-    width:100%;
-    height:0.15em;      
-}
-.logIn:hover{
-    cursor:pointer;
-    font-weight: bolder;
-    transition: .7s;
-}
-.logIn:hover > .navBar{
-    background:rgb(243, 74, 74);
+.navBtn:hover > .navBar{
+    background:hsl(240, 91%, 22%);
     transition: .7s;
 }
