@@ -1,6 +1,8 @@
 import React from 'react';
 import './navBar.css';
 import logo from "./logo.png";
+import logol2 from './logol2.png';
+import logol1 from './logol1.png';
 import {motion} from 'framer-motion';
 // import {Search, X, Home} from 'heroicons-react';
 
@@ -48,7 +50,7 @@ const Navbar = ({onMobile,logIn})=>{
                     <motion.div className="brandName"
                         variants={logoVariants}
                     >
-                        <img src={logo} alt="logo"></img>
+                        <img src={logol1} alt="logo"></img>
                     </motion.div>
                     <div className="navigator"                        
                     >

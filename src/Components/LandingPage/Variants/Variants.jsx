@@ -78,3 +78,31 @@ export const bloomingbuttonVariants ={
         }
     }
 }
+
+export const slideLeftVariants = {
+    hidden:{
+        opacity:0,
+        x:'35vw'        
+    },
+    visible:{
+        opacity:1,
+        x:0,        
+        transition:{
+            duration:.8
+        }
+    }    
+}
+
+export const slideRightVariants = {
+    hidden:{
+        opacity:0,
+        x:'-25vw'        
+    },
+    visible:{
+        opacity:1,
+        x:0,        
+        transition:{
+            duration:.8
+        }
+    }    
+}
